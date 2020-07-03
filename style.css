@@ -1,5 +1,5 @@
 body{
-    background: #34495e;
+    background: #FC427B;
 }
 
 *{
@@ -7,7 +7,6 @@ body{
     margin: 0px;
     box-sizing: border-box;
 }
-
 .main-section{
     background: transparent;
     max-width: 500px;
@@ -43,7 +42,7 @@ body{
     margin: 0px auto;
     border: none;
     outline: none;
-    background: #0088FF;
+    background: #1B9CFC;
     color: #fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -76,9 +75,10 @@ body{
 
 .show-todo-section{
     width: 100%;
-    margin: 10px auto;
-    padding: 20px 10px;
-    box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
+    background: #fff;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .todo-item{
@@ -113,7 +113,7 @@ body{
     width: 20px;
     height: 20px;
     font-family: sans-serif;
-    color: rgb(139, 97, 93);
+    color: #6D214F;
     text-decoration: none;
     text-align: right;
     padding: 0px 5px 8px 0px;
@@ -128,10 +128,17 @@ body{
 }
 
 .checked{
-    color: #999 !important;
+    color: #FC427B !important;
     text-decoration: line-through;
 }
 
 .todo-item input{
     margin: 0px 5px;
+}
+
+.empty{
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #ccc;
 }
