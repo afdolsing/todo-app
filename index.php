@@ -24,9 +24,9 @@
         </div>
         <div class="show-todo-section">
         <?php 
-            $todos = $conn->query("SELECT * FROM tbl_todo ORDER BY id DESC");
+            $query = $conn->query("SELECT * FROM tbl_todo ORDER BY id DESC");
 
-            while($todo = $todos->fetch(PDO::FETCH_ASSOC)):
+            while($todo = $query->fetch(PDO::FETCH_ASSOC)):
         ?>
                 <div class="todo-item">
                     <span id="<?php echo $todo['id']; ?>"
