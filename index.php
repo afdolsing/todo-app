@@ -26,7 +26,7 @@
         <?php 
             $todos = $conn->query("SELECT * FROM tbl_todo ORDER BY id DESC");
 
-            while($todo = $todos->fetch(PDO::FETCH_ASSOC)){
+            while($todo = $todos->fetch(PDO::FETCH_ASSOC)):
         ?>
                 <div class="todo-item">
                     <span id="<?php echo $todo['id']; ?>"
@@ -46,8 +46,50 @@
                     <br>
                     <small>created: <?php echo $todo['date'] ?></small>
                 </div>
-        <?php } ?>
+        <?php endwhile ?>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.remove-to-do').click(function(){
+                const id = $(this).attr('id');
+                
+                $.post("delete.php", 
+                      {
+                          id: id
+                      },
+                      (data)  => {
+                         if(data){
+                             $(this).parent().hide(600);
+                         }
+                      }
+                );
+            });
+
+            $(".check-box").click(function(e){
+                const id = $(this).attr('data-todo-id');
+                
+                $.post('check.php', 
+                      {
+                          id: id
+                      },
+                      (data) => {
+                          if(data != 'error'){
+                              const h2 = $(this).next();
+                              if(data === '1'){
+                                  h2.removeClass('checked');
+                              }else {
+                                  h2.addClass('checked');
+                              }
+                          }
+                      }
+                );
+            });
+            
+        });
+    </script>
 </body>
 </html>
