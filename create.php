@@ -3,7 +3,7 @@ require 'connection.php';
 
 if(isset($_POST['title'])){
    
-    $title = htmlspecialchars($_POST['title']);
+    $title = $_POST['title'];
 
     if(empty($title)){
         header("Location: index.php?mess=error");
