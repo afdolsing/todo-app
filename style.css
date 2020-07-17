@@ -1,7 +1,6 @@
 body{
     background: #FC427B;
 }
-
 *{
     padding: 0px;
     margin: 0px;
@@ -15,7 +14,6 @@ body{
     margin: 30px auto;
     border-radius: 10px;
 }
-
 .add-section{
     width: 100%;
     background: #fff;
@@ -23,7 +21,6 @@ body{
     padding: 10px;
     border-radius: 5px;
 }
-
 .add-section input{
     display: block;
     width: 95%;
@@ -34,7 +31,6 @@ body{
     border-radius: 5px;
     padding: 0px 5px;
 }
-
 .add-section button{
     display: block;
     width: 95%;
@@ -49,12 +45,10 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .add-section button:hover{
     box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
     opacity: 0.7;
 }
-
 .add-section button span{
     border: 1px solid #fff;
     border-radius: 50%;
@@ -62,7 +56,6 @@ body{
     width: 18px;
     height: 18px;
 }
-
 #errorMes{
     display: block;
     background: #f2dede;
@@ -72,7 +65,6 @@ body{
     padding: 10px;
     height: 35px;
 }
-
 .show-todo-section{
     width: 100%;
     background: #fff;
@@ -80,7 +72,6 @@ body{
     padding: 10px;
     border-radius: 5px;
 }
-
 .todo-item{
     width: 95%;
     margin: 10px auto;
@@ -88,7 +79,6 @@ body{
     box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
     border-radius: 5px;
 }
-
 .todo-item h2{
     display: inline-block;
     padding: 5px 0px;
@@ -96,7 +86,6 @@ body{
     font-family: sans-serif;
     color: #555;
 }
-
 .todo-item small{
     display: block;
     width: 100%;
@@ -106,7 +95,6 @@ body{
     font-size: 14px;
     font-family: sans-serif;
 }
-
 .remove-to-do{
     display: block;
     float: right;
@@ -121,21 +109,17 @@ body{
     transition: background 1s;
     cursor: pointer;
 }
-
 .remove-to-do:hover{
     background: rgb(139, 97, 93);
     color: #fff;
 }
-
 .checked{
     color: #FC427B !important;
     text-decoration: line-through;
 }
-
 .todo-item input{
     margin: 0px 5px;
 }
-
 .empty{
     font-family: sans-serif;
     font-size: 16px;
