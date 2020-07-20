@@ -8,6 +8,7 @@
     // koneksikan menggunakan PDO -> PHP Data Object
     try{
         $conn = new PDO("mysql:host=$server;dbname=$db_name", $user, $pass);
+        // akses ke database
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $e){
         echo "Connection failed : ". $e->getMessage();
