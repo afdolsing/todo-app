@@ -12,12 +12,12 @@ if(isset($_POST['id'])){
         $query->execute([$id]);
 
         $todo = $query->fetch();
-        $uId = $todo['id'];
+        $updateId = $todo['id'];
         $checked = $todo['checked'];
 
-        $uChecked = $checked ? 0 : 1;
+        $updateChecked = $checked ? 0 : 1;
 
-        $res = $conn->query("UPDATE tbl_todo SET checked=$uChecked WHERE id=$uId");
+        $res = $conn->query("UPDATE tbl_todo SET checked=$updateChecked WHERE id=$updateId");
 
         if($res){
             echo $checked;
